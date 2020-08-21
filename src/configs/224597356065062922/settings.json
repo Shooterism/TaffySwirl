@@ -1,0 +1,17 @@
+[
+	{
+		"welcomeMessage": true,
+		"leaveMessage": true,
+		"derpi": false,
+		"greetMessageEmbed": true,
+		"memberCount": true
+	},
+	{
+		"welcomeText": "@user has joined the Server!",
+		"leaveText": "@user has left the Server!",
+		"verifyRole": "500236300117475359",
+		"verifyJoinText": "Welcome to the server @user! Please use `!verify` to gain the Test Subjects role!",
+		"verifySuccessText": "Enjoy your stay!",
+		"userCount": 37
+	}
+]
