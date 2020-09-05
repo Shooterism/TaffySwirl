@@ -1,3 +1,3 @@
-module.exports = async (client, config) => {
-  console.log("Message Call")
+module.exports = async message => {
+  console.log("event.message INIT...")
 }

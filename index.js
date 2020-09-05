@@ -1,23 +1,21 @@
 const Discord = require("discord.js");
 
-const config = require("./src/settings.json");
-const token = require("./src/token.json");
-
-const ready = require ('./events/ready.js');
 const message = require ('./events/message.js');
 
-const client = new Discord.Client({disableEveryone:true});
+global.client = new Discord.Client({disableEveryone:true});
 client.Discord = Discord;
+client.config = require("./src/settings.json");
 
-ready(client, config);
-
+console.log("Initialising modules...\n");
 try{
-  message(client, config);
+  message();
 }
 catch(err){
   if(err){
     console.log(err)
   }
-}
+};
+console.log("\nDone.");
 
-client.login(token);
+require ('./events/ready.js')
+client.login(require("./src/token.json"));
