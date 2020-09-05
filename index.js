@@ -1,21 +1,24 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 
-const message = require ('./events/message.js');
 
+// * All major dependencies are stored within the global object to efficiently share it between modules
 global.client = new Discord.Client({disableEveryone:true});
 client.Discord = Discord;
-client.config = require("./src/settings.json");
+client.config = require('./src/settings.json');
+client.message = require('./events/message.js');
 
-console.log("Initialising modules...\n");
+// * Initialisation of all major systems
+console.log("Initialising modules...\n");             // ! INIT
 try{
-  message();
+  client.message();
 }
 catch(err){
   if(err){
     console.log(err)
   }
-};
-console.log("\nDone.");
+}
+finally{(console.log("\nDone."))};                    // ! INIT
 
+// * Initialises and runs ready event immediately on event
 require ('./events/ready.js')
-client.login(require("./src/token.json"));
+client.login(require('./src/token.json'));
