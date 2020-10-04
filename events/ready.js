@@ -8,7 +8,7 @@ module.exports = () => {
         name:`${client.config.version}`, 
         type:'PLAYING'}
     })
-    //.then(console.log)                // !  DEBUG
+    //.then(console.log)                // ! DEBUG
     .catch(console.error);
   });
 }
