@@ -1,38 +1,25 @@
-const verify = require('../commands/global/verification.js');
+const prefix = '!';
 
-module.exports = function() {
-  console.log("event.message INIT...");                        // ! INIT
-  const prefix = "!";
+module.exports = (message) => {
+  // * Ignores bots and regular messages
+  if (message.author.bot || !message.content.startsWith(prefix)) return;
+  // ? Grabs serverConf. Should probably be done differently using parser?
+  //const serverConf = require(`../src/configs/${message.guild.id}/config.json`);
 
-  // * Runs on client message asynchronously
-  client.on("message", async message => {
-    // ? This grabs serverConf. Should probably be done differently using parser?
-    let serverConf = require(`../src/configs/${message.guild.id}/config.json`);
-    //console.log("Message Call");                            // ! DEBUG
-    // * Ignores bots...
-    if(message.author.bot) return;
-    // * ... and messages sent without prefix
-    if(message.content.indexOf(prefix) !== 0) return;
-    //else(console.log("Prefix Call"));                       // ! DEBUG
+  // * Takes message, seperates command and arguments
+  const args = message.content.slice(prefix.length).trim().split(/\s+/g);
+  const command = args.shift().toLowerCase();
 
-    // * Takes message, seperates command and arguments
-    // * Example: !say mew mew
-    // * args = ["mew","mew"]
-    // * command = say
-    let args = message.content.slice(prefix.length).trim().split(/ +/g);
-    let command = args.shift().toLowerCase();
-
-    //TEMPORARY LAST MINUTE SOLUTION BELOW
-
-    if(command == "verify") {
-      if(args.length != 0) {
-        message.channel.send("This command doesn't take any arguments!");
-      }
-      else{
-        verify.run(message)
-      }
-    }
-
-    //console.log(command + " " + args.join(" "));            // ! DEBUG
-  });
+  // * TEMPORARY LAST MINUTE SOLUTION
+  switch (command) {
+    case 'verify':
+      // * There's no need to escape that here, it can be removed
+      // if (args.length) {
+      //   message.channel.send('This command doesn\'t take any arguments!');
+      //   return;
+        // }
+      const verify = require('../commands/global/verify.js');
+      verify.run(message);
+      break;
+  }
 }

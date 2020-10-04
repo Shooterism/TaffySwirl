@@ -1,7 +1,7 @@
 {
-  "version" : "v0.2.0",
+  "prefix": "!",
   "creator" : "147433323503943680",
-  "superUser" : [
+  "superUsers" : [
       "147433323503943680"
   ],
   "nychannelID": "661587250735480879",
