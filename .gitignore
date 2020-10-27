@@ -106,5 +106,5 @@ dist
 # VSCode directory
 .vscode
 
-#Token
-src/token.json
+# Token
+src/token.js*

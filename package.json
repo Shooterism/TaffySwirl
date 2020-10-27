@@ -4,21 +4,14 @@
   "description": "Discord Moderation Bot",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.3.1",
-    "fs": "0.0.1-security"
+    "discord.js": "^12.3.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shooterism/TaffySwirl.git"
   },
   "author": "Shooterism",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shooterism/TaffySwirl/issues"
-  },
-  "homepage": "https://github.com/Shooterism/TaffySwirl#readme"
+  "license": "ISC"
 }
