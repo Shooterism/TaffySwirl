@@ -39,5 +39,5 @@ module.exports = async (messageOld, messageNew) => {
     });
   }
 
-  messageNew.guild.channels.cache.get('512313721251430401').send({embed: embed});
+  messageNew.guild.channels.cache.get('492687541712191488').send({embed: embed});
 }

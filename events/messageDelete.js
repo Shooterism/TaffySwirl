@@ -29,5 +29,5 @@ module.exports = async (messageDelete) => {
     name: 'Attachments',
     value: messageDelete.attachments.map(file => `(${bytesToUnits(file.size)}${file.height ? `, ${file.height}x${file.width}` : ''}) ${file.name}`).join('\n')
   });
-  messageDelete.guild.channels.cache.get('512313721251430401').send({embed: embed});
+  messageDelete.guild.channels.cache.get('492687541712191488').send({embed: embed});
 }
