@@ -1,13 +1,13 @@
 {
-	"server": "Ponyville Plaza",
-	"commandLogChannel": "492687541712191488",
-	"welcomeChannel": "454941425193451520",
-	"memberCountChannel": "572510038049161216",
-	"verifyChannel": "467478036502151168",
-	"prefix": "&",
-	"restrictedGiveaway": {
-		"role": "536972701731127298",
-		"channelID": "455178452358791168",
-		"messageID": "720079036633710634"
-	}
+  "server": "Ponyville Plaza",
+  "commandLogChannel": "492687541712191488",
+  "welcomeChannel": "454941425193451520",
+  "memberCountChannel": "572510038049161216",
+  "verifyChannel": "467478036502151168",
+  "prefix": "&",
+  "restrictedGiveaway": {
+    "role": "536972701731127298",
+    "channelID": "455178452358791168",
+    "messageID": "720079036633710634"
+  }
 }

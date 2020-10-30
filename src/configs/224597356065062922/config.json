@@ -1,8 +1,8 @@
 {
-	"server": "DevStuff",
-	"commandLogChannel": "536495010238169088",
-	"welcomeChannel": "513705987690201088",
-	"memberCountChannel": "572490773472346112",
-	"verifyChannel": "580296532612349952",
-	"prefix": "!"
+  "server": "DevStuff",
+  "commandLogChannel": "536495010238169088",
+  "welcomeChannel": "513705987690201088",
+  "memberCountChannel": "572490773472346112",
+  "verifyChannel": "580296532612349952",
+  "prefix": "!"
 }

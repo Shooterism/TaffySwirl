@@ -1,17 +1,17 @@
 [
-	{
-		"welcomeMessage": true,
-		"leaveMessage": true,
-		"derpi": true,
-		"greetMessageEmbed": true,
-		"memberCount": true
-	},
-	{
-		"welcomeText": "@user has joined the Server!",
-		"leaveText": "@user has left the Server!",
-		"verifyRole": "455175873138655232",
-		"verifyJoinText": "Welcome to the server @user! Please read the rules in order to learn how to verify yourself! Have a nice stay!",
-		"verifySuccessText": "Enjoy your stay!",
-		"userCount": 5146
-	}
+  {
+    "welcomeMessage": true,
+    "leaveMessage": true,
+    "derpi": true,
+    "greetMessageEmbed": true,
+    "memberCount": true
+  },
+  {
+    "welcomeText": "@user has joined the Server!",
+    "leaveText": "@user has left the Server!",
+    "verifyRole": "455175873138655232",
+    "verifyJoinText": "Welcome to the server @user! Please read the rules in order to learn how to verify yourself! Have a nice stay!",
+    "verifySuccessText": "Enjoy your stay!",
+    "userCount": 5146
+  }
 ]

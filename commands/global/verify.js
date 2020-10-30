@@ -1,4 +1,4 @@
-exports.run = (message) => {
+const run = (message) => {
   const verificationChannel = '467478036502151168';
   const memberRole = '455175873138655232';
 
@@ -8,4 +8,6 @@ exports.run = (message) => {
   if (!message.deleted) message.delete();
   message.channel.send(`${message.author} Enjoy your stay!`);
   message.member.roles.add(memberRole);
-}
+};
+
+export { run };
