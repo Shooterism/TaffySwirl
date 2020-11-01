@@ -1,8 +1,8 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
 exports.loadEvents = async () => {
   let files = await fs.promises.readdir('./events');
-  for (file of files){
+  for (const file of files) {
     // ignore non-js files
     if (!file.endsWith('.js')) return;
 
@@ -12,4 +12,4 @@ exports.loadEvents = async () => {
     console.log(`Loaded ${name}`);
     delete require.cache[require.resolve(`../events/${file}`)];
   }
-}
+};
