@@ -2,6 +2,7 @@ import * as fs from 'fs';
 
 exports.loadEvents = async () => {
   let files = await fs.promises.readdir('./events');
+
   for (const file of files) {
     // ignore non-js files
     if (!file.endsWith('.js')) return;

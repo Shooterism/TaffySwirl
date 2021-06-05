@@ -1,13 +1,13 @@
 {
   "name": "taffyswirl",
-  "version": "0.2.1",
+  "version": "0.3.0-alpha",
   "description": "Discord Moderation Bot",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.4.1"
+    "discord.js": "^12.5.3"
   },
   "devDependencies": {
-    "eslint": "^7.12.1"
+    "eslint": "^7.28.0"
   },
   "scripts": {},
   "repository": {
