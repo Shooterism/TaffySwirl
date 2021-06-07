@@ -24,8 +24,6 @@ module.exports = (member) => {
   }
 
   if (verifyChannel) {
-    verifyChannel.send(
-      `Welcome to the server ${member.user}! Please read the rules in order to learn how to verify yourself! Have a nice stay!`
-    );
+    verifyChannel.send(`Welcome to the server ${member.user}! Please read the rules in order to learn how to verify yourself! Have a nice stay!`);
   }
 };

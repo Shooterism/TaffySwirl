@@ -1,8 +1,6 @@
 module.exports = async () => {
-  console.log(
-    `Bot initialised, currently serving ${client.users.cache.size} users in ${client.guilds.cache.size} guilds.`
-  );
-  // * Sets Discord presence.
+  console.log(`Bot initialised, currently serving ${client.users.cache.size} users in ${client.guilds.cache.size} guilds.`);
+  // sets Discord presence.
   await client.user
     .setPresence({
       status: 'dnd',
@@ -11,6 +9,6 @@ module.exports = async () => {
         type: 'PLAYING',
       },
     })
-    .then(console.log('Updated client presence.'))
+    .then(console.log('Updated client presence'))
     .catch(console.error);
 };

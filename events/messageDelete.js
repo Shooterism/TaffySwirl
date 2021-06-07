@@ -30,18 +30,9 @@ module.exports = (messageDelete) => {
   if (messageDelete.attachments ? messageDelete.attachments.size : false) {
     embed.fields.push({
       name: 'Attachments',
-      value: messageDelete.attachments
-        .map(
-          (file) =>
-            `(${bytesToUnits(file.size)}${
-              file.height ? `, ${file.height}x${file.width}` : ''
-            }) ${file.name}`
-        )
-        .join('\n'),
+      value: messageDelete.attachments.map((file) => `(${bytesToUnits(file.size)}${file.height ? `, ${file.height}x${file.width}` : ''}) ${file.name}`).join('\n'),
     });
   }
 
-  messageDelete.guild.channels.cache
-    .get('492687541712191488')
-    .send({ embed: embed });
+  messageDelete.guild.channels.cache.get('492687541712191488').send({ embed: embed });
 };

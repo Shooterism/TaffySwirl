@@ -35,18 +35,9 @@ module.exports = (messageOld, messageNew) => {
   if (messageNew.attachments ? messageNew.attachments.size : false) {
     embed.fields.push({
       name: 'File Attachments',
-      value: messageNew.attachments
-        .map(
-          (file) =>
-            `(${bytesToUnits(file.size)}${
-              file.height ? `, ${file.height}x${file.width}` : ''
-            }) ${file.name}`
-        )
-        .join('\n'),
+      value: messageNew.attachments.map((file) => `(${bytesToUnits(file.size)}${file.height ? `, ${file.height}x${file.width}` : ''}) ${file.name}`).join('\n'),
     });
   }
 
-  messageNew.guild.channels.cache
-    .get('492687541712191488')
-    .send({ embed: embed });
+  messageNew.guild.channels.cache.get('492687541712191488').send({ embed: embed });
 };
