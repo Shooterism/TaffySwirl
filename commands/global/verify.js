@@ -1,4 +1,4 @@
-const run = (message) => {
+exports.run = (message) => {
   const verificationChannel = '467478036502151168';
   const memberRole = '455175873138655232';
 
@@ -9,5 +9,3 @@ const run = (message) => {
   message.channel.send(`${message.author} Enjoy your stay!`);
   message.member.roles.add(memberRole);
 };
-
-export { run };

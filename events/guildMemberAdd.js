@@ -1,4 +1,4 @@
-export default (member) => {
+module.exports = (member) => {
   if (member.guild.id != '370605707965235200') return;
   const welcomeChannel = member.guild.channels.cache.get('454941425193451520');
   const verifyChannel = member.guild.channels.cache.get('467478036502151168');

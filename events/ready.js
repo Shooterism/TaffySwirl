@@ -1,4 +1,4 @@
-export default async () => {
+module.exports = async () => {
   console.log(
     `Bot initialised, currently serving ${client.users.cache.size} users in ${client.guilds.cache.size} guilds.`
   );

@@ -1,10 +1,10 @@
-import { Client } from 'discord.js';
+const { Client } = require('discord.js');
 
 const client = new Client({ disableMentions: 'everyone' });
 client.config = require('./src/settings.json');
 client.version = require('./package.json').version;
 
-// * All major dependencies are stored within the global object to efficiently share it between modules
+// All major dependencies are stored within the global object to efficiently share it between modules
 global.client = client;
 
 (async function () {

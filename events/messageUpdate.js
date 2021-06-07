@@ -1,6 +1,6 @@
-import { bytesToUnits } from '../utils/formatter';
+const { bytesToUnits } = require('../utils/formatter');
 
-export default (messageOld, messageNew) => {
+module.exports = (messageOld, messageNew) => {
   if (messageNew.channel.type === 'dm') return;
   //serverConf = require(`../src/configs/${messageUpdate.guild.id}/config.json`);
   if (messageNew.author.bot || !messageNew.editedTimestamp) return;

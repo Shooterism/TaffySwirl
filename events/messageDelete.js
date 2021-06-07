@@ -1,6 +1,6 @@
-import { bytesToUnits } from '../utils/formatter';
+const { bytesToUnits } = require('../utils/formatter');
 
-export default (messageDelete) => {
+module.exports = (messageDelete) => {
   if (messageDelete.channel.type == 'dm') return;
   //serverConf = require(`../src/configs/${messageDelete.guild.id}/config.json`);
   if (messageDelete.author.bot) return;

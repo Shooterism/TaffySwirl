@@ -1,4 +1,4 @@
-import * as verify from '../commands/global/verify';
+const verify = require('../commands/global/verify');
 
 const prefix = '&';
 

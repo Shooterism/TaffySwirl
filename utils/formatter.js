@@ -1,4 +1,4 @@
-const bytesToUnits = (n) => {
+exports.bytesToUnits = (n) => {
   n = parseInt(n);
   let str = [];
   if (n >= 1024 * 1024 * 1024) cut(1024 * 1024 * 1024, 'GB');
@@ -11,5 +11,3 @@ const bytesToUnits = (n) => {
   }
   return str.join(' ');
 };
-
-export { bytesToUnits };

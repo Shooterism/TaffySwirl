@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+const fs = require('fs');
 
 exports.loadEvents = async () => {
   let files = await fs.promises.readdir('./events');
