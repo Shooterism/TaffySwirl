@@ -3,6 +3,12 @@ module.exports = (member) => {
 
   const welcomeChannel = member.guild.channels.cache.get('454941425193451520');
 
+  const twitterBotRegex = /twitter\.com\/h0nde/gi;
+
+  if (twitterBotRegex.test(member.user.username)) {
+    return;
+  }
+
   if (!welcomeChannel) return;
   const embed = {
     color: 0xff0000,

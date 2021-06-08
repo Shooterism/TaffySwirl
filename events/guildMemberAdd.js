@@ -2,6 +2,23 @@ module.exports = (member) => {
   if (member.guild.id != '370605707965235200') return;
   const welcomeChannel = member.guild.channels.cache.get('454941425193451520');
   const verifyChannel = member.guild.channels.cache.get('467478036502151168');
+  const cmdChannel = member.guild.channels.cache.get('587564376274239493');
+
+  const twitterBotRegex = /twitter\.com\/h0nde/gi;
+  const twitterBotReason = 'twitter h0nde bot';
+
+  if (twitterBotRegex.test(member.user.username)) {
+    member
+      .ban({ days: 1, reason: twitterBotReason })
+      .then((member) => {
+        cmdChannel.send(`Auto-banned ${member.user.tag}, reason: ${twitterBotReason}`);
+      })
+      .then((err) => {
+        console.loge(err);
+        cmdChannel.send(`Failed to ban ${member.user.tag}`);
+      });
+    return;
+  }
 
   if (welcomeChannel) {
     const embed = {
